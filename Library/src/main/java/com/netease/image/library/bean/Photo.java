@@ -16,9 +16,26 @@ public class Photo implements Serializable {
      * 压缩后路径
      */
     private String compressPath;
+    /**
+     * 图片类型
+     */
+    private int type;
 
     public Photo(String originalPath) {
         this.originalPath = originalPath;
+    }
+
+    public Photo(String originalPath, int type) {
+        this.originalPath = originalPath;
+        this.type = type;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getOriginalPath() {
